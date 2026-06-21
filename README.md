@@ -34,25 +34,55 @@ A full-stack web platform where traffic authorities enter event details and rece
 
 ## Architecture
 
-```
-┌─────────────────────┐    ┌──────────────────────────────────────┐
-│   React + Vite      │────│   FastAPI Backend (Python)            │
-│   TypeScript        │    │                                       │
-│   Tailwind CSS      │    │  ┌─────────────────────────────────┐  │
-│   Recharts charts   │    │  │  ML Prediction Engine             │  │
-│   Leaflet maps      │    │  │  ─ Real ASTRAM data (8,054 rows) │  │
-└─────────────────────┘    │  │  ─ RandomForest + HistGradBoost  │  │
-                            │  │  ─ LightGBM/XGB/CatBoost (opt.) │  │
-                            │  └─────────────────────────────────┘  │
-                            │                                       │
-                            │  ┌─────────────────────────────────┐  │
-                            │  │  PostgreSQL + PostGIS             │  │
-                            │  │  ─ 22 real Bengaluru corridors   │  │
-                            │  │  ─ Events, Predictions, Users    │  │
-                            │  └─────────────────────────────────┘  │
-                            └──────────────────────────────────────┘
-
-Deployed: Vercel (frontend) + Render (backend) + Supabase (PostgreSQL)
+```text
+                        ┌──────────────────────────────────────────────┐
+                        │           EventFlow AI Platform              │
+                        └──────────────────────────────────────────────┘
+                                         │
+                                         ▼
+        ┌──────────────────────────────────────────────────────────────┐
+        │                    Frontend (Vercel)                         │
+        │  • React + Vite                                              │
+        │  • TypeScript                                                │
+        │  • Tailwind CSS                                              │
+        │  • Recharts                                                  │
+        │  • Leaflet + OpenStreetMap                                   │
+        └──────────────────────────────────────────────────────────────┘
+                                         │
+                                REST API (Axios)
+                                         │
+                                         ▼
+        ┌──────────────────────────────────────────────────────────────┐
+        │                  Backend (FastAPI + Python)                  │
+        │  • JWT Authentication                                        │
+        │  • Event Management APIs                                     │
+        │  • Analytics & Feedback APIs                                 │
+        │  • AI Prediction Service                                     │
+        └──────────────────────────────────────────────────────────────┘
+                          │                               │
+                          ▼                               ▼
+        ┌──────────────────────────────┐   ┌─────────────────────────────┐
+        │     ML Prediction Engine      │   │     PostgreSQL + PostGIS    │
+        │ • ASTRAM Bengaluru Dataset    │   │ • Users                     │
+        │ • Random Forest               │   │ • Events                    │
+        │ • HistGradientBoosting        │   │ • Predictions               │
+        │ • LightGBM                    │   │ • Feedback                  │
+        │ • XGBoost                     │   │ • 22 Bengaluru Corridors    │
+        │ • CatBoost                    │   │ • Spatial Data              │
+        └──────────────────────────────┘   └─────────────────────────────┘
+                          │                               │
+                          └───────────────┬───────────────┘
+                                          ▼
+                     ┌─────────────────────────────────────┐
+                     │   AI Traffic Predictions & Insights │
+                     │ • Congestion Score                  │
+                     │ • Event Duration                    │
+                     │ • Severity Estimation               │
+                     │ • Officer Allocation                │
+                     │ • Barricade Planning                │
+                     │ • Diversion Routes                  │
+                     │ • Public Advisories                 │
+                     └─────────────────────────────────────┘
 ```
 
 ---
