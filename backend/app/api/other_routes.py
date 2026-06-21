@@ -191,17 +191,25 @@ async def get_prediction_accuracy(
 @corridors_router.get("/", response_model=List[dict])
 async def list_corridors(db: AsyncSession = Depends(get_db)):
     """Returns all 22 real Bengaluru corridors seeded from the real ASTRAM dataset."""
+    from sqlalchemy import cast
+    from geoalchemy2 import Geometry
     from geoalchemy2.functions import ST_X, ST_Y
+
+    @corridors_router.get("/", response_model=List[dict])
+    async def list_corridors(db: AsyncSession = Depends(get_db)):
+        """Returns all real Bengaluru corridors."""
+
     result = await db.execute(
         select(
             Corridor.id,
             Corridor.corridor_name,
-            ST_X(Corridor.centroid_location).label("longitude"),
-            ST_Y(Corridor.centroid_location).label("latitude"),
+            ST_X(cast(Corridor.centroid_location, Geometry)).label("longitude"),
+            ST_Y(cast(Corridor.centroid_location, Geometry)).label("latitude"),
             Corridor.historical_incident_count,
             Corridor.zone,
         ).order_by(desc(Corridor.historical_incident_count))
     )
+
     return [
         {
             "id": str(row.id),
