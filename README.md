@@ -1,6 +1,10 @@
 # EventFlow AI — Event-Driven Traffic Impact Prediction & Smart Traffic Management
 
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nitesh-N-D/Eventflow-AI)
+[![Frontend](https://img.shields.io/badge/🌐_Frontend-Live-000?style=for-the-badge&logo=vercel&logoColor=white)](https://eventflow-ai-kappa.vercel.app)
+[![Backend](https://img.shields.io/badge/⚙️_Backend-Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://eventflow-ai-pzmk.onrender.com)
+[![API Docs](https://img.shields.io/badge/📚_Swagger-Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)](https://eventflow-ai-pzmk.onrender.com/docs)
+[![GitHub](https://img.shields.io/badge/💻_GitHub-Repository-181717?style=for-the-badge&logo=github)](https://github.com/Nitesh-N-D/Eventflow-AI)
+
 
 **AI-powered Smart City Traffic Command Center for Bengaluru**
 
