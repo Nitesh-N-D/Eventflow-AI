@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import type { EventOut, DiversionRoute, Corridor } from "../types";
+import L from "leaflet";
+import "leaflet/dist/leaflet.css";
 
 interface Props {
   event?: EventOut;
@@ -8,9 +10,6 @@ interface Props {
   height?: string;
 }
 
-declare global {
-  interface Window { L: typeof import("leaflet"); }
-}
 
 export default function TrafficMap({ event, corridors = [], diversionRoutes = [], height = "400px" }: Props) {
   const mapRef = useRef<HTMLDivElement>(null);
@@ -18,8 +17,7 @@ export default function TrafficMap({ event, corridors = [], diversionRoutes = []
 
   useEffect(() => {
     if (!mapRef.current || mapInstanceRef.current) return;
-    const L = window.L;
-    if (!L) return;
+   
 
     const map = L.map(mapRef.current).setView([12.9716, 77.5946], 11);
     mapInstanceRef.current = map;
