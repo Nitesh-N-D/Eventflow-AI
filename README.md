@@ -50,6 +50,7 @@ A full-stack web platform where traffic authorities enter event details and rece
 
 ---
 
+```
 # 🛠️ Tech Stack
 
 ## 🎨 Frontend
@@ -85,6 +86,7 @@ A full-stack web platform where traffic authorities enter event details and rece
 - 🐘 Supabase PostgreSQL (Cloud Database)
 
 ---
+```
 
 ## Architecture
 
