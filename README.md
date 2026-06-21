@@ -32,6 +32,60 @@ A full-stack web platform where traffic authorities enter event details and rece
 
 ---
 
+```markdown
+## ✨ Features
+
+- 🚦 AI-powered Event-Driven Traffic Impact Prediction
+- 🧠 Machine Learning–based congestion and severity estimation
+- 🗺️ Interactive Bengaluru corridor visualization with Leaflet
+- 🚓 Smart manpower allocation recommendations
+- 🚧 Diversion route planning and corridor suggestions
+- 📊 Real-time analytics dashboard with prediction summaries
+- 📈 Post-event feedback and prediction accuracy tracking
+- 🔐 Secure JWT authentication with role-based access control
+- 👥 Multiple user roles: **Admin**, **Traffic Officer**, and **Public User**
+- ⚡ High-performance FastAPI REST API with React + Vite frontend
+- ☁️ Cloud-native deployment using **Vercel**, **Render**, and **Supabase**
+- 📍 Built using the **ASTRAM Bengaluru Traffic Dataset** for AI-driven traffic analysis
+
+---
+
+# 🛠️ Tech Stack
+
+## 🎨 Frontend
+- ⚛️ React 18
+- 🔷 TypeScript
+- ⚡ Vite
+- 🎨 Tailwind CSS
+- 🌐 Axios
+- 🗺️ Leaflet & OpenStreetMap
+- 📊 Recharts
+
+## 🚀 Backend
+- 🐍 FastAPI
+- 🗄️ SQLAlchemy
+- ⚡ AsyncPG
+- 🐘 PostgreSQL
+- 🌍 PostGIS
+- 🔐 JWT Authentication
+
+## 🤖 Machine Learning
+- 🧠 Scikit-learn
+- 🌲 Random Forest
+- 📈 HistGradientBoosting
+- 💡 LightGBM
+- 🚀 XGBoost
+- 🐱 CatBoost
+- 🐼 Pandas
+- 🔢 NumPy
+
+## ☁️ Deployment
+- ▲ Vercel (Frontend Hosting)
+- 🎨 Render (Backend Hosting)
+- 🐘 Supabase PostgreSQL (Cloud Database)
+
+---
+
 ## Architecture
 
 ```text
