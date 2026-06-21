@@ -32,9 +32,9 @@ A full-stack web platform where traffic authorities enter event details and rece
 
 ---
 
-```markdown
-## ✨ Features
 
+## ✨ Features
+```markdown
 - 🚦 AI-powered Event-Driven Traffic Impact Prediction
 - 🧠 Machine Learning–based congestion and severity estimation
 - 🗺️ Interactive Bengaluru corridor visualization with Leaflet
