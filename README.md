@@ -1,6 +1,6 @@
 # EventFlow AI — Event-Driven Traffic Impact Prediction & Smart Traffic Management
 
-[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-repo/eventflow-ai)
+[![Deploy on Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nitesh-N-D/Eventflow-AI)
 
 **AI-powered Smart City Traffic Command Center for Bengaluru**
 
@@ -58,7 +58,7 @@ Deployed: Vercel (frontend) + Render (backend) + Supabase (PostgreSQL)
 ### Option A — Docker Compose (recommended, full stack)
 
 ```bash
-git clone https://github.com/your-repo/eventflow-ai
+git clone https://github.com/Nitesh-N-D/Eventflow-AI
 cd eventflow-ai
 docker-compose up --build
 ```
