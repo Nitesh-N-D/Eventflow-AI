@@ -1,0 +1,60 @@
+{
+  "weights": {
+    "random_forest": 0.31697447347700974,
+    "hist_gradient_boosting": 0.0,
+    "lightgbm": 0.5164190228052823,
+    "xgboost": 0.0,
+    "catboost": 0.1666065037177079
+  },
+  "feature_columns": [
+    "hour",
+    "day_of_week",
+    "is_weekend",
+    "is_peak_hour",
+    "lag_1",
+    "lag_2",
+    "lag_24",
+    "lag_168",
+    "rolling_mean_6",
+    "rolling_std_6",
+    "rolling_max_6",
+    "high_severity_share_lag_1",
+    "hour_x_weekend",
+    "lag1_x_peak",
+    "corridor_id_mean_encoded"
+  ],
+  "ensemble_rmse": 0.5024625765554571,
+  "ensemble_r2": 0.20970438936611302,
+  "per_model_metrics": {
+    "random_forest": {
+      "rmse": 0.5027111920537239,
+      "r2": 0.20892212873740512
+    },
+    "hist_gradient_boosting": {
+      "rmse": 0.507230586974317,
+      "r2": 0.19463454596764695
+    },
+    "lightgbm": {
+      "rmse": 0.5032091462874598,
+      "r2": 0.20735416813509666
+    },
+    "xgboost": {
+      "rmse": 0.5044698889718972,
+      "r2": 0.20337742567062378
+    },
+    "catboost": {
+      "rmse": 0.504683315070646,
+      "r2": 0.2027031981687485
+    }
+  },
+  "n_train_rows": 64196,
+  "n_holdout_rows": 16060,
+  "models_available": {
+    "lightgbm": true,
+    "xgboost": true,
+    "catboost": true,
+    "random_forest": true,
+    "hist_gradient_boosting": true
+  },
+  "trained_at": "2026-06-21T04:32:29.887593+00:00"
+}

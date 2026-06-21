@@ -1,0 +1,189 @@
+{
+  "duration_model": {
+    "weights": {
+      "random_forest": 0.3804352870947381,
+      "hist_gradient_boosting": 0.0,
+      "lightgbm": 0.0,
+      "xgboost": 0.0,
+      "catboost": 0.6195647129052618
+    },
+    "encodings": {
+      "event_cause": {
+        "means": {
+          "accident": 52.09019794858276,
+          "congestion": 78.43172421520063,
+          "construction": 1186.545570500411,
+          "debris": 60.4495289,
+          "fog_low_visibility": 60.4495289,
+          "others": 603.8327497167944,
+          "pot_holes": 1612.6299838498098,
+          "procession": 179.09649470114942,
+          "protest": 2892.984466666667,
+          "public_event": 648.8917770270269,
+          "road_conditions": 1198.7138216391252,
+          "tree_fall": 773.1328966633628,
+          "vehicle_breakdown": 45.35270785246842,
+          "vip_movement": 20.98006666666667,
+          "water_logging": 1357.3799783693469
+        },
+        "global_mean": 399.31577667884915
+      },
+      "corridor": {
+        "means": {
+          "Airport New South Road": 443.96694401133334,
+          "Bannerghata Road": 684.0202803628572,
+          "Bellary Road 1": 249.97732387212216,
+          "Bellary Road 2": 224.7066928670792,
+          "CBD 1": 913.0664342653508,
+          "CBD 2": 687.5430294505483,
+          "Hennur Main Road": 447.6475296184375,
+          "Hosur Road": 473.9549013662783,
+          "IRR(Thanisandra road)": 963.1369008398148,
+          "Magadi Road": 372.60702588069313,
+          "Mysore Road": 267.5616453983584,
+          "Non-corridor": 460.8222857607752,
+          "ORR East 1": 526.6473515102764,
+          "ORR East 2": 702.5933460135282,
+          "ORR North 1": 292.4533035967358,
+          "ORR North 2": 261.2367214099719,
+          "ORR West 1": 300.97715728876267,
+          "Old Airport Road": 378.89916742146465,
+          "Old Madras Road": 255.73683279398395,
+          "Tumkur Road": 172.2074766239041,
+          "Varthur Road": 571.4389943068306,
+          "West of Chord Road": 402.2681697871479
+        },
+        "global_mean": 399.31577667884915
+      },
+      "zone": {
+        "means": {
+          "Central Zone 1": 329.40669344864534,
+          "Central Zone 2": 208.31260345037475,
+          "East Zone 1": 406.306138452,
+          "East Zone 2": 505.5298663165043,
+          "North Zone 1": 440.35168427975697,
+          "North Zone 2": 264.667235467408,
+          "South Zone 1": 623.8713543015938,
+          "South Zone 2": 618.5966390464744,
+          "Unknown Zone": 421.33285911152893,
+          "West Zone 1": 287.4139357822581,
+          "West Zone 2": 301.9378296699659
+        },
+        "global_mean": 399.31577667884915
+      }
+    },
+    "feature_columns": [
+      "hour",
+      "day_of_week",
+      "is_weekend",
+      "is_peak_hour",
+      "is_planned",
+      "event_cause_mean_encoded_duration_minutes",
+      "corridor_mean_encoded_duration_minutes",
+      "zone_mean_encoded_duration_minutes"
+    ],
+    "log_transform": true,
+    "rmse_minutes": 903.3502871472532,
+    "r2": 0.18517339219679207,
+    "n_train": 6443,
+    "n_test": 1611
+  },
+  "severity_model": {
+    "weights": {
+      "random_forest": 0.19923412195983398,
+      "hist_gradient_boosting": 0.09878960380085999,
+      "lightgbm": 0.09864862361326873,
+      "xgboost": 0.2651263980219341,
+      "catboost": 0.338201252604103
+    },
+    "encodings": {
+      "event_cause": {
+        "means": {
+          "accident": 0.44302721088435376,
+          "congestion": 0.2833333333333333,
+          "construction": 0.3371232876712329,
+          "debris": 0.325,
+          "fog_low_visibility": 0.2,
+          "others": 0.26915708812260536,
+          "pot_holes": 0.23276255707762558,
+          "procession": 0.44482758620689655,
+          "protest": 0.5346153846153846,
+          "public_event": 0.2918918918918919,
+          "road_conditions": 0.27163120567375887,
+          "tree_fall": 0.5026431718061674,
+          "vehicle_breakdown": 0.5297377985462097,
+          "vip_movement": 0.2,
+          "water_logging": 0.5247297297297298
+        },
+        "global_mean": 0.4597392519012883
+      },
+      "corridor": {
+        "means": {
+          "Airport New South Road": 0.5780000000000001,
+          "Bannerghata Road": 0.5651428571428572,
+          "Bellary Road 1": 0.6246822033898306,
+          "Bellary Road 2": 0.6217821782178218,
+          "CBD 1": 0.5552631578947369,
+          "CBD 2": 0.5927631578947369,
+          "Hennur Main Road": 0.54875,
+          "Hosur Road": 0.5932203389830508,
+          "IRR(Thanisandra road)": 0.5263888888888889,
+          "Magadi Road": 0.6024752475247525,
+          "Mysore Road": 0.6507512520868114,
+          "Non-corridor": 0.22193587662337663,
+          "ORR East 1": 0.6090673575129534,
+          "ORR East 2": 0.5035714285714286,
+          "ORR North 1": 0.5940092165898618,
+          "ORR North 2": 0.5820224719101124,
+          "ORR West 1": 0.5992424242424244,
+          "Old Airport Road": 0.5840909090909091,
+          "Old Madras Road": 0.611764705882353,
+          "Tumkur Road": 0.6327397260273973,
+          "Varthur Road": 0.6409836065573771,
+          "West of Chord Road": 0.6028169014084508
+        },
+        "global_mean": 0.4597392519012883
+      },
+      "zone": {
+        "means": {
+          "Central Zone 1": 0.5322660098522167,
+          "Central Zone 2": 0.4476445396145611,
+          "East Zone 1": 0.4005,
+          "East Zone 2": 0.35064935064935066,
+          "North Zone 1": 0.50875,
+          "North Zone 2": 0.5395705521472393,
+          "South Zone 1": 0.28825136612021857,
+          "South Zone 2": 0.44125874125874126,
+          "Unknown Zone": 0.45497333333333334,
+          "West Zone 1": 0.48533724340175954,
+          "West Zone 2": 0.553924914675768
+        },
+        "global_mean": 0.4597392519012883
+      }
+    },
+    "feature_columns": [
+      "hour",
+      "day_of_week",
+      "is_weekend",
+      "is_peak_hour",
+      "is_planned",
+      "event_cause_mean_encoded_severity_score",
+      "corridor_mean_encoded_severity_score",
+      "zone_mean_encoded_severity_score"
+    ],
+    "log_transform": false,
+    "rmse": 0.08922573410408406,
+    "r2": 0.8538781924863141,
+    "n_train": 6443,
+    "n_test": 1611
+  },
+  "rare_category_caveat": "Several event_cause categories have small real sample sizes (e.g. protest n=14, vip_movement n=20 in the full dataset). Predictions for these rare categories are statistically less reliable than for high-volume categories like construction, accident, or vehicle_breakdown, and should be treated with appropriate caution in any operational deployment.",
+  "trained_at": "2026-06-21T04:32:42.517309+00:00",
+  "models_available": {
+    "lightgbm": true,
+    "xgboost": true,
+    "catboost": true,
+    "random_forest": true,
+    "hist_gradient_boosting": true
+  }
+}

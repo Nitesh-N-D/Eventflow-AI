@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PRIMARY META TAGS — SEO
+    ════════════════════════════════════════════════════════════════════ -->
+    <title>EventFlow AI — Event-Driven Traffic Impact Prediction & Smart Traffic Management</title>
+    <meta name="title" content="EventFlow AI — Event-Driven Traffic Impact Prediction & Smart Traffic Management" />
+    <meta
+      name="description"
+      content="AI-powered Smart City Traffic Command Center. Predicts traffic impact of planned and unplanned events, recommends manpower deployment, barricading, and diversion routes. Built on real Bengaluru ASTRAM traffic incident data."
+    />
+    <meta
+      name="keywords"
+      content="traffic management, event-driven congestion, smart city, AI traffic prediction, Bengaluru traffic, ASTRAM, manpower deployment, traffic diversion, traffic police, Flipkart Gridlock, event impact prediction"
+    />
+    <meta name="author" content="T. S. Bhuvaneshwar, N. D. Nitesh, L. Jayeshwar, S. Nithiswaran" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#080b14" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GOOGLE SEARCH CONSOLE VERIFICATION
+         Replace the content value below with your real verification token
+         from https://search.google.com/search-console/ownership
+    ════════════════════════════════════════════════════════════════════ -->
+    <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         CANONICAL URL — update with your real deployed domain
+    ════════════════════════════════════════════════════════════════════ -->
+    <link rel="canonical" href="https://eventflow-ai.vercel.app/" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         OPEN GRAPH / FACEBOOK
+    ════════════════════════════════════════════════════════════════════ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eventflow-ai.vercel.app/" />
+    <meta property="og:title" content="EventFlow AI — Smart City Traffic Command Center" />
+    <meta
+      property="og:description"
+      content="AI-powered platform predicting traffic impact of events and recommending optimal manpower, barricading, and diversion strategies. Built on real Bengaluru traffic incident data."
+    />
+    <meta property="og:image" content="https://eventflow-ai.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="EventFlow AI — Smart City Traffic Command Center dashboard" />
+    <meta property="og:site_name" content="EventFlow AI" />
+    <meta property="og:locale" content="en_IN" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         TWITTER / X CARD
+    ════════════════════════════════════════════════════════════════════ -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://eventflow-ai.vercel.app/" />
+    <meta name="twitter:title" content="EventFlow AI — Event-Driven Traffic Impact Prediction" />
+    <meta
+      name="twitter:description"
+      content="Predict traffic impact of rallies, festivals, sports events & accidents. Real AI. Real Bengaluru data. Smart recommendations."
+    />
+    <meta name="twitter:image" content="https://eventflow-ai.vercel.app/og-image.png" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         FAVICON & APP ICONS (all sizes for full coverage)
+         Place the actual image files in /public/icons/
+    ════════════════════════════════════════════════════════════════════ -->
+    <link rel="icon" type="image/svg+xml" href="/icons/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icons/android-chrome-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icons/android-chrome-512x512.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#080b14" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         PERFORMANCE — PRECONNECT & FONT LOADING
+    ════════════════════════════════════════════════════════════════════ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         STRUCTURED DATA — JSON-LD (Google Rich Results)
+    ════════════════════════════════════════════════════════════════════ -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "EventFlow AI",
+        "alternateName": "EventFlow AI Traffic Management System",
+        "url": "https://eventflow-ai.vercel.app/",
+        "description": "AI-powered event-driven traffic impact prediction and smart traffic management platform for urban cities. Predicts congestion, recommends manpower deployment, barricading, and diversion routes using real historical traffic incident data.",
+        "applicationCategory": "GovernmentApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "en-IN",
+        "creator": {
+          "@type": "Organization",
+          "name": "EventFlow AI Team",
+          "member": [
+            { "@type": "Person", "name": "T. S. Bhuvaneshwar" },
+            { "@type": "Person", "name": "N. D. Nitesh" },
+            { "@type": "Person", "name": "L. Jayeshwar" },
+            { "@type": "Person", "name": "S. Nithiswaran" }
+          ]
+        },
+        "featureList": [
+          "AI Traffic Impact Prediction",
+          "Real-time Congestion Monitoring",
+          "Resource Optimization Engine",
+          "Smart Barricading Recommendations",
+          "Diversion Route Planning",
+          "Public Advisory Generation",
+          "Post-Event Learning System",
+          "Role-Based Access Control"
+        ],
+        "screenshot": "https://eventflow-ai.vercel.app/og-image.png",
+        "softwareVersion": "1.0.0",
+        "datePublished": "2024-06-01"
+      }
+    </script>
+
+    <!-- ═══════════════════════════════════════════════════════════════════
+         GOOGLE ANALYTICS (replace G-XXXXXXXXXX with your real tag)
+    ════════════════════════════════════════════════════════════════════ -->
+    <!--
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    -->
+  </head>
+  <body class="bg-bg text-white antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

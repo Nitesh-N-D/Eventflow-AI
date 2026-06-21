@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-family: 'Inter', system-ui, sans-serif; }
+  body { background: #080b14; color: white; }
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: #0f1623; }
+  ::-webkit-scrollbar-thumb { background: #1e2d45; border-radius: 3px; }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface border border-border rounded-xl backdrop-blur-sm;
+  }
+  .glass-card-hover {
+    @apply glass-card transition-all duration-200 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5;
+  }
+  .btn-primary {
+    @apply bg-accent hover:bg-accentGlow text-white font-semibold px-4 py-2.5 rounded-lg transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply bg-transparent hover:bg-white/5 text-white/70 hover:text-white font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  .btn-danger {
+    @apply bg-bad/10 hover:bg-bad/20 text-bad border border-bad/30 font-semibold px-4 py-2 rounded-lg transition-all duration-200;
+  }
+  .input-field {
+    @apply w-full bg-surfaceAlt border border-border rounded-lg px-3 py-2.5 text-sm text-white placeholder-muted focus:outline-none focus:border-accent/60 focus:ring-1 focus:ring-accent/30 transition-all duration-200;
+  }
+  .label {
+    @apply text-xs text-muted uppercase tracking-wide font-medium mb-1 block;
+  }
+  .stat-card {
+    @apply glass-card p-5 flex flex-col gap-2;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border;
+  }
+  .section-title {
+    @apply text-lg font-bold text-white;
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+}
+
+/* Map dark filter for control-room aesthetic */
+.map-dark .leaflet-tile-pane {
+  filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9) saturate(0.8);
+}
+.leaflet-container { font-family: 'Inter', sans-serif !important; }
+
+/* Animated grid background */
+.grid-bg {
+  background-image: linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Congestion score ring animation */
+@keyframes scoreRing {
+  from { stroke-dashoffset: 283; }
+  to { stroke-dashoffset: var(--target-offset); }
+}
+.score-ring { animation: scoreRing 1.2s ease-out forwards; }
+
+/* Pulse for live indicators */
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.15); }
+}
+.live-dot { animation: livePulse 1.5s ease-in-out infinite; }

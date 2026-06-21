@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+.env
+!.env.example
+.env.local
+
+# ML models and data — tracked via Git LFS or re-generated on deploy
+ml_pipeline/models/*.pkl
+ml_pipeline/data/processed/*.csv
+ml_pipeline/data/processed/*.parquet
+ml_pipeline/data/processed/*.json
+# The raw CSV must be present to run data_loader.py but is large (4.5MB)
+# — either track with Git LFS or place it manually before deploying
+# ml_pipeline/data/raw/astram_event_data.csv
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.production
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Coverage
+.coverage
+htmlcov/

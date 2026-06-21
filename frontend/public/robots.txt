@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap location — update with your real deployed domain
+Sitemap: https://eventflow-ai.vercel.app/sitemap.xml
+
+# Crawl-delay for considerate bots
+Crawl-delay: 10

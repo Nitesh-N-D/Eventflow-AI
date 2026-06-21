@@ -1,0 +1,52 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: eventflow
+      POSTGRES_PASSWORD: eventflow_dev_password
+      POSTGRES_DB: eventflow_ai
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./backend/migrations/001_initial_schema.sql:/docker-entrypoint-initdb.d/001_schema.sql
+      - ./backend/migrations/002_seed_corridors.sql:/docker-entrypoint-initdb.d/002_seed.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eventflow -d eventflow_ai"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+asyncpg://eventflow:eventflow_dev_password@postgres:5432/eventflow_ai
+      SECRET_KEY: dev-secret-key-change-in-production-minimum-32-chars
+      ALGORITHM: HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES: "60"
+      CORS_ORIGINS: "http://localhost:5173"
+      ENVIRONMENT: development
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./ml_pipeline/models:/app/ml_pipeline/models
+      - ./ml_pipeline/data:/app/ml_pipeline/data
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_URL: http://localhost:8000
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

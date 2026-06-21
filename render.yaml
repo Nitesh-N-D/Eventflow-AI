@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: eventflow-ai-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: .
+    plan: starter
+    region: singapore
+    envVars:
+      - key: DATABASE_URL
+        sync: false          # Set this in Render dashboard from your Supabase/Render Postgres URL
+      - key: SECRET_KEY
+        generateValue: true  # Render auto-generates a secure random value
+      - key: ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"
+      - key: CORS_ORIGINS
+        value: "https://eventflow-ai.vercel.app,http://localhost:5173"
+      - key: ENVIRONMENT
+        value: production
+    healthCheckPath: /health
+    autoDeploy: true
