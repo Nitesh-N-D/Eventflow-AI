@@ -47,12 +47,12 @@ A full-stack web platform where traffic authorities enter event details and rece
 - ⚡ High-performance FastAPI REST API with React + Vite frontend
 - ☁️ Cloud-native deployment using **Vercel**, **Render**, and **Supabase**
 - 📍 Built using the **ASTRAM Bengaluru Traffic Dataset** for AI-driven traffic analysis
-
+```
 ---
 
-```
-# 🛠️ Tech Stack
 
+# 🛠️ Tech Stack
+```
 ## 🎨 Frontend
 - ⚛️ React 18
 - 🔷 TypeScript
@@ -84,9 +84,8 @@ A full-stack web platform where traffic authorities enter event details and rece
 - ▲ Vercel (Frontend Hosting)
 - 🎨 Render (Backend Hosting)
 - 🐘 Supabase PostgreSQL (Cloud Database)
-
----
 ```
+---
 
 ## Architecture
 
