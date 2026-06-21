@@ -171,24 +171,6 @@ Replace all `https://eventflow-ai.vercel.app/` with your real Vercel URL.
 
 ---
 
-## Favicon & Icon Generation
-
-The `frontend/public/icons/favicon.svg` is included as the primary SVG favicon.
-For full cross-browser coverage, generate PNG versions from it:
-
-1. Go to https://realfavicongenerator.net
-2. Upload `favicon.svg`
-3. Download the package and extract to `frontend/public/icons/`
-4. Required files:
-   - `favicon-16x16.png`
-   - `favicon-32x32.png`
-   - `apple-touch-icon.png` (180×180)
-   - `android-chrome-192x192.png`
-   - `android-chrome-512x512.png`
-
-All are already referenced in `index.html`.
-
----
 
 ## Default Login Credentials
 
