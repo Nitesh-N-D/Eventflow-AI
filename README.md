@@ -148,14 +148,6 @@ Trigger a redeploy.
 
 ---
 
-**Update `frontend/index.html` canonical and OG URLs:**
-Replace all instances of `https://eventflow-ai.vercel.app/` with your real Vercel URL.
-
-**Update `frontend/public/sitemap.xml`:**
-Replace all `https://eventflow-ai.vercel.app/` with your real Vercel URL.
-
----
-
 
 ## Default Login Credentials
 
