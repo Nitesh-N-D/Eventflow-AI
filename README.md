@@ -148,21 +148,6 @@ Trigger a redeploy.
 
 ---
 
-## Google Search Console Setup
-
-1. Go to https://search.google.com/search-console
-2. Add property → URL prefix → enter your Vercel URL
-3. Choose "HTML tag" verification method
-4. Copy the verification token (looks like: `abc123def456...`)
-5. Open `frontend/index.html` → find this line:
-   ```html
-   <meta name="google-site-verification" content="REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN" />
-   ```
-6. Replace `REPLACE_WITH_YOUR_GOOGLE_SEARCH_CONSOLE_TOKEN` with your actual token
-7. Commit and push → Vercel will redeploy automatically
-8. Back in Search Console → click Verify
-9. After verification → go to Sitemaps → add `https://your-app.vercel.app/sitemap.xml`
-
 **Update `frontend/index.html` canonical and OG URLs:**
 Replace all instances of `https://eventflow-ai.vercel.app/` with your real Vercel URL.
 
